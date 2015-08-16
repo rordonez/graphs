@@ -13,7 +13,7 @@ public class GraphTestUtils {
         graph.addEdge(new Edge(3, 4, 6));
         graph.addEdge(new Edge(0, 3, 5));
         graph.addEdge(new Edge(2, 4, 2));
-        graph.addEdge(new Edge(2, 4, 3));
+        graph.addEdge(new Edge(4, 1, 3));
         graph.addEdge(new Edge(0, 4, 7));
 
         return graph;

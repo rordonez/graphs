@@ -12,7 +12,7 @@ public class NumberOfRoutesUnderDistanceTest {
     @Test
     public void testNumberOfRoutesWhenThereIsNoRoute() throws Exception {
         //When
-        NumberOfRoutesUnderDistance routesWithDistance = new NumberOfRoutesUnderDistance(createGraph(), 2, 2, 30);
+        NumberOfRoutesUnderDistance routesWithDistance = new NumberOfRoutesUnderDistance(createGraph(), 4, 0, 30);
 
         //Then
         assertThat(routesWithDistance.getNumberOfRoutes(), is(0));
@@ -24,7 +24,7 @@ public class NumberOfRoutesUnderDistanceTest {
         NumberOfRoutesUnderDistance routesWithDistance = new NumberOfRoutesUnderDistance(createGraph(), 0, 4, 30);
 
         //Then
-        assertThat(routesWithDistance.getNumberOfRoutes(), is(5));
+        assertThat(routesWithDistance.getNumberOfRoutes(), is(11));
     }
 
     @Test
