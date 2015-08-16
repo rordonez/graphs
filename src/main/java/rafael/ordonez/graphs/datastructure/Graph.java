@@ -71,11 +71,28 @@ public class Graph {
      * @param edge is the edge to add
      */
     public void addEdge(Edge edge) {
+        parameterValidation(edge);
         adjacencyList[edge.getSource()].add(edge);
         numberOfEdges++;
     }
 
+    private void parameterValidation(Edge edge) {
+        if(edge == null) {
+            throw new NullPointerException("The parameter edge is null");
+        }
+        else {
+            validateRange(edge.getSource());
+        }
+    }
+
+    private void validateRange(int source) {
+        if (source < 0 || source >numberOfVertices) {
+            throw new IndexOutOfBoundsException("Source vertex: " + source + " is out of bounds. Check the range.");
+        }
+    }
+
     public HashSet<Edge> adjacent(int vertex) {
+        validateRange(vertex);
         return adjacencyList[vertex];
     }
 
