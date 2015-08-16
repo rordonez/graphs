@@ -7,8 +7,7 @@ import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Created by rafa on 13/8/15.
@@ -38,5 +37,18 @@ public class EdgeTest {
 
         //Then
         assertNull(edge);
+    }
+
+    @Test
+    public void testEquals() throws Exception {
+        //Given
+        Edge edge = new Edge(1, 2, 3);
+
+        //When
+        assertTrue(edge.equals(edge));
+        assertTrue(edge.equals(new Edge(1, 2, 5)));
+        assertFalse(edge.equals(null));
+        assertFalse(edge.equals(new Object()));
+        assertFalse(edge.equals(new Edge(2, 1, 3)));
     }
 }

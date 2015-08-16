@@ -6,8 +6,8 @@ import java.util.HashSet;
  *
  * By convention, I use the names 0 through 1 for the vertices in a V-vertex graph.The main reason that I choose
  * this system is to make it easy to write code that efficiently accesses information corresponding to each vertex,
- * using array indexing. The class {@link ExampleGraph} uses this class to transform symbol vertex names into
- * indexes.
+ * using array indexing. It is possible to use a class with a Graph with <code>String</code> nodes and transform it
+ * to this graph.
  *
  * An array of adjacency sets, where I maintain a vertex-indexed array of sets of the vertices adjacent to each vertex.
  * This Graph implementation achieves the following performance characteristics:
@@ -69,6 +69,8 @@ public class Graph {
      * {@link Edge#getSource()}
      *
      * @param edge is the edge to add
+     * @throws NullPointerException if the parameter <code>edge</code> is null
+     * @throws IndexOutOfBoundsException if the source vertex in the edge parameter is out of bounds
      */
     public void addEdge(Edge edge) {
         parameterValidation(edge);
@@ -91,6 +93,14 @@ public class Graph {
         }
     }
 
+    /**
+     *
+     * This method returns a set of all adjacents vertices given a source one.
+     *
+     * @param vertex source vertex to obtain all its adjacents
+     * @return a {@link HashSet} with all adjacents vertices to <code>vertex</code>
+     * @throws IndexOutOfBoundsException if the source vertex is not on the graph.
+     */
     public HashSet<Edge> adjacent(int vertex) {
         validateRange(vertex);
         return adjacencyList[vertex];
