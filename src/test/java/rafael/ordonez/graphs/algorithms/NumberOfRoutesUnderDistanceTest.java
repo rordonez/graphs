@@ -24,7 +24,7 @@ public class NumberOfRoutesUnderDistanceTest {
         NumberOfRoutesUnderDistance routesWithDistance = new NumberOfRoutesUnderDistance(createGraph(), 0, 4, 30);
 
         //Then
-        assertThat(routesWithDistance.getNumberOfRoutes(), is(11));
+        assertThat(routesWithDistance.getNumberOfRoutes(), is(15));
     }
 
     @Test

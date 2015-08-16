@@ -32,6 +32,6 @@ public class NumberOfPathsWithAGivenNumberOfEdgesTest {
         NumberOfPathsWithAGivenNumberOfEdges numberOfPathsWithAGivenNumberOfEdges = new NumberOfPathsWithAGivenNumberOfEdges(GraphTestUtils.createGraph(), 0, 4, 4);
 
         //Then
-        assertThat(numberOfPathsWithAGivenNumberOfEdges.getNumberOfPaths(), is(2));
+        assertThat(numberOfPathsWithAGivenNumberOfEdges.getNumberOfPaths(), is(3));
     }
 }

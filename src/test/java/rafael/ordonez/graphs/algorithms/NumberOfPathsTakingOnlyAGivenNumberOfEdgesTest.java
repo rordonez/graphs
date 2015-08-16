@@ -32,6 +32,6 @@ public class NumberOfPathsTakingOnlyAGivenNumberOfEdgesTest {
         NumberOfPathsTakingOnlyAGivenNumberOfEdges numberOfPathsTakingOnlyAGivenNumberOfEdges = new NumberOfPathsTakingOnlyAGivenNumberOfEdges(createGraph(), 0, 4, 4);
 
         //Then
-        assertThat(numberOfPathsTakingOnlyAGivenNumberOfEdges.getNumberOfPaths(), is(5));
+        assertThat(numberOfPathsTakingOnlyAGivenNumberOfEdges.getNumberOfPaths(), is(7));
     }
 }
