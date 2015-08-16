@@ -9,9 +9,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
-/**
- * Created by rafa on 13/8/15.
- */
 public class EdgeTest {
 
     @Test

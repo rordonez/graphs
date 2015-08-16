@@ -6,9 +6,6 @@ import rafael.ordonez.graphs.datastructure.mock.GraphTestUtils;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-/**
- * Created by rafa on 16/8/15.
- */
 public class NumberOfPathsWithAGivenNumberOfEdgesTest {
 
     @Test
